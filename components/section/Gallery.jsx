@@ -26,10 +26,8 @@ const Gallery = () => {
           viewport={{ once: true }}
           className="text-center w-full py-4 leading-relaxed"
         >
-          <div className="font-[Hattori] flex flex-col gap-2 bg-gradient-to-br from-amber-800 via-amber-500/70 to-amber-800 bg-clip-text text-transparent text-3xl sm:text-3xl">
-            <span className="font-[parisienne] p-1 text-5xl font-semibold">
-              Happiness
-            </span>{" "}
+          <div className="flex items-center justify-center text-[#5e4833] text-xl sm:text-2xl">
+            <span className="alex p-1 text-3xl ">Happiness</span>{" "}
             <span> Moments</span>
           </div>
         </motion.div>

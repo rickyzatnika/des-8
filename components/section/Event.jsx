@@ -88,39 +88,26 @@ const Event = ({ guest }) => {
   return (
     <div
       ref={sectionRef}
-      className="w-full min-h-3xl py-24 relative"
+      className="w-full min-h-3xl py-16 bg-white relative px-2 "
       id="event"
     >
-      <div className="absolute  w-full top-0 h-full z-30">
-        <Image
-          src="/image/background-profile.png"
-          alt=""
-          layout="fill"
-          objectFit="cover"
-          priority
-        />
-      </div>
-      <div className="w-full gap-8 flex flex-col items-center justify-around relative z-40">
-        <h1 className="text-4xl bg-gradient-to-tr from-amber-600 via-yellow-700 to-transparent bg-clip-text text-transparent font-[parisienne] ">
-          Save The Date
-        </h1>
+      <div className="w-full gap-8 pb-12 shadow-lg flex flex-col items-center justify-around relative z-40">
+        <AddToCalendarButton
+          name="The Wedding Rahmadi & Dinda"
+          options={["Google"]}
+          location="Jl. Tubagus Ismail No.90, Sekeloa, Kecamatan Coblong, Kota Bandung, Jawa Barat 40134"
+          startDate="2023-6-10"
+          startTime="10:15"
+          endTime="14:20"
+          timeZone="Asia/Jakarta"
+          buttonStyle="neumorphism"
+          lightMode="bodyScheme"
+          size="3"
+        ></AddToCalendarButton>
         <div className="w-full px-2">
           <CountDown />
         </div>
-        <div className="flex flex-col gap-6 items-center justify-center">
-          <AddToCalendarButton
-            name="The Wedding Rahmadi & Dinda"
-            options="'Google'"
-            location="Jl. Tubagus Ismail No.90, Sekeloa, Kecamatan Coblong, Kota Bandung, Jawa Barat 40134"
-            startDate="2023-6-10"
-            startTime="10:15"
-            endTime="14:20"
-            buttonStyle="date"
-            timeZone="Asia/Jakarta"
-            label=" add to calendar"
-            trigger="click"
-          ></AddToCalendarButton>
-        </div>
+        <div className="flex flex-col gap-6 items-center justify-center"></div>
       </div>
       {guest && guest?.status === "Opened" ? (
         <>

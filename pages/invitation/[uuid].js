@@ -9,6 +9,7 @@ import {
   Event,
   Footer,
   Gift,
+  Story
 } from "../../components";
 import BackSound from "../../components/Backsound";
 import axios from "axios";
@@ -24,6 +25,7 @@ const GuestInvitation = ({ guest, posts }) => {
       <Profile />
       <Invitation guest={guest} />
       <Event guest={guest} />
+      <Story />
       <Gallery />
       <Gift />
       <Wish guest={guest} posts={posts} />

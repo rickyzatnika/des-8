@@ -12,28 +12,14 @@
   font-weight: normal;
 }
 @font-face {
-  font-family: "Shikamaru";
-  src: url("../fonts/shikamaru.ttf");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
   font-family: "parisienne";
   src: url("../fonts/parisienne-regular.ttf");
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
-  font-family: "TimesNewRomance";
-  src: url("../fonts/Times-New-Romance.ttf");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "timesi";
-  src: url("../fonts/timesi.ttf");
-  font-weight: normal;
-  font-style: normal;
+
+.alex {
+  font-family: "Yellowtail", cursive;
 }
 
 .mouse {
@@ -151,4 +137,32 @@
     top: -3.8rem;
     color: #bd7d34c9;
   }
+}
+
+/* blog page style */
+.post:nth-child(2n + 1) {
+  flex-direction: row-reverse;
+}
+.img {
+  flex: 2;
+}
+.img {
+  position: relative;
+}
+.img::after {
+  content: "";
+  position: absolute;
+  bottom: -100px;
+  right: -20px;
+  background-image: url("/img/bunga.png");
+  transform: rotate(160deg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 260px;
+  height: 190px;
+  z-index: -1;
+}
+
+.content {
+  flex: 3;
 }

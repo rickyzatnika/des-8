@@ -6,19 +6,19 @@ const ShowProtocol = () => {
   const images = [
     {
       id: 1,
-      src: "/image/prokes_1.png",
+      src: "/img/prokes-1.png",
     },
     {
       id: 2,
-      src: "/image/prokes_2.png",
+      src: "/img/prokes-2.png",
     },
     {
       id: 3,
-      src: "/image/prokes_3.png",
+      src: "/img/prokes-3.png",
     },
     {
       id: 4,
-      src: "/image/prokes_4.png",
+      src: "/img/prokes-4.png",
     },
   ];
 
@@ -32,15 +32,14 @@ const ShowProtocol = () => {
           duration: 0.8,
           type: "spring",
         }}
-        className="w-full min-h-3xl  shadow-xl pt-20 pb-0 shadow-black/20 bg-white"
+        className="w-full min-h-3xl  pt-20 pb-6 px-2 sm:px-3  "
       >
-        <div className=" w-full h-full flex flex-col items-center justify-between">
-          <div className="text-lg w-full shadow-lg py-3 shadow-black/30 text-zinc-200 bg-zinc-800 text-center ">
-            <h1 className="font-[Hattori]">PROTOKOL KESEHATAN</h1>
-            <p className="text-sm text-zinc-400 py-2 px-1">
-              Tanpa mengurangi rasa hormat, acara ini menerapkan Protokol
-              Kesehatan, sesuai dengan peraturan & rekomendasi pemerintah.
-            </p>
+        <div className=" w-full flex flex-col py-8 items-center shadow-xl rounded-xl shadow-black/20 bg-gradient-to-t from-zinc-100 to-white justify-between">
+          <div className="text-lg w-full   text-center ">
+            <h1 className="font-[Hattori] text-zinc-100 tracking-widest px-3 py-1 bg- w-fit mx-auto bg-[#524446] rounded-full">
+              CORONAVIRUS
+            </h1>
+            <span className="text-[#524446]">PREVENTION</span>
           </div>
           <div className=" py-4 grid grid-cols-2 px-3 items-center justify-center">
             {images.map((image) => (

@@ -85,7 +85,7 @@ const GetUniqueCode = ({ guest }) => {
                   className="py-2 text-sm  flex items-center gap-1 cursor-pointer px-3 shadow-lg rounded shadow-black/20 text-zinc-200 hover:text-zinc-100 bg-[#516C56]  hover:bg-[#49634e] "
                 >
 
-                  loading...
+                  sedang memuat...
                 </button> : <button
                   onClick={() => handleClick("Opened")}
                   type="submit"

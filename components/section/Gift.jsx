@@ -20,8 +20,8 @@ const Gift = () => {
   };
   return (
     <>
-      <div className="w-full min-h-3xl py-14 flex items-center bg-white ">
-        <div className=" w-[96%] mx-auto py-8 rounded-[50px] h-full lg:w-5/6 px-4 lg:px-12 shadow-xl bg-zinc-100 shadow-[#9c8450]/40 flex flex-col items-center justify-center">
+      <div className="w-full min-h-3xl pb-14 flex items-center pt-8 ">
+        <div className=" w-[96%] mx-auto py-8 rounded-[50px] h-full lg:w-5/6 px-4 lg:px-12 shadow-xl bg-zinc-100 shadow-black/20 flex flex-col items-center justify-center">
           <div className="flex flex-col gap-3 items-center justify-center">
             <motion.h3
               initial={{ y: -40, opacity: 0 }}
