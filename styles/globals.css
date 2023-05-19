@@ -8,9 +8,9 @@
 }
 @font-face {
   font-family: "parisienne";
-  font-weight: 400;
-  src: local("parisienne"),
-    url("/fonts/parisienne-regular.ttf") format("truetype");
+  src: url("../fonts/parisienne-regular.ttf");
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
