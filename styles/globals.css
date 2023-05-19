@@ -1,25 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Alex+Brush&family=Nunito&display=swap");
 
 ::-webkit-scrollbar {
   display: none !important;
 }
 
-@font-face {
-  font-family: "Hattori";
-  src: url("../fonts/Hattori-hanzo.otf");
-  font-weight: normal;
-}
-@font-face {
-  font-family: "parisienne";
-  src: url("../fonts/parisienne-regular.ttf");
-  font-weight: normal;
-  font-style: normal;
+body {
+  font-family: "Nunito", sans-serif;
 }
 
 .alex {
   font-family: "Yellowtail", cursive;
+}
+
+.brush {
+  font-family: "Alex Brush", cursive;
 }
 
 .mouse {

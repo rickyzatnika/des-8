@@ -1,18 +1,20 @@
 import React, { useState } from "react";
+import dynamic from 'next/dynamic';
 import {
   Header,
-  Wish,
-  Profile,
   Navbar,
-  Invitation,
-  Gallery,
-  Event,
   Footer,
   Gift,
   Story
 } from "../../components";
 import BackSound from "../../components/Backsound";
 import axios from "axios";
+
+const Invitation = dynamic(() => import('../../components/section/Invitation'));
+const Event = dynamic(() => import('../../components/section/Event'));
+const Wish = dynamic(() => import('../../components/section/Wish'));
+const Gallery = dynamic(() => import('../../components/section/Gallery'));
+const Profile = dynamic(() => import('../../components/section/Profile'));
 
 const GuestInvitation = ({ guest, posts }) => {
 

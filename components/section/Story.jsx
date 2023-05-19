@@ -42,8 +42,23 @@ const Story = () => {
               priority
             />
           </div>
-          <span className="p-1 text-xl ">Short</span>{" "}
-          <span className="alex text-3xl"> Story</span>
+          <motion.span
+            initial={{ x: 80 }}
+            whileInView={{ x: 0 }}
+            transition={{ duration: 0.7 }}
+            className="p-1 text-xl brush "
+          >
+            Short
+          </motion.span>{" "}
+          <motion.span
+            initial={{ x: -120 }}
+            whileInView={{ x: 0 }}
+            transition={{ duration: 0.4 }}
+            className="alex text-3xl"
+          >
+            {" "}
+            Story
+          </motion.span>
         </div>
         <div className="posts overflow-hidden pt-14 flex flex-wrap-reverse flex-col gap-10 md:gap-12">
           {data?.map((post, i) => (
@@ -51,7 +66,12 @@ const Story = () => {
               className="post flex flex-wrap-reverse flex-col-reverse sm:flex-row gap-3 "
               key={i}
             >
-              <div className="img">
+              <motion.div
+                initial={{ y: 30 }}
+                whileInView={{ y: 0 }}
+                transition={{ duration: 0.4 }}
+                className="img"
+              >
                 <Image
                   src={post?.image}
                   alt={post?.title}
@@ -61,10 +81,10 @@ const Story = () => {
                   className="rounded-tr-[35%] rounded-bl-[35%]"
                   priority
                 />
-              </div>
+              </motion.div>
               <div className="content flex flex-col justify-around items-start gap-4">
                 <div className="title space-y-2 leading-relaxed">
-                  <h1 className="text-lg text-[#a5876c] md:text-xl">
+                  <h1 className="text-md brush text-[#a5876c] md:text-xl">
                     {post?.title}
                   </h1>
                   <div className="text-zinc-500 leading-relaxed text-sm">

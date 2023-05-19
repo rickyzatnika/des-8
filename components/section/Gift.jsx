@@ -14,7 +14,7 @@ const Gift = () => {
     setCopyText(false);
     setTimeout(() => {
       setCopyText(true);
-    }, 2000);
+    }, 1000);
     navigator.clipboard.writeText("0123456789");
     return () => clearTimeout();
   };
@@ -23,27 +23,29 @@ const Gift = () => {
     setCopyText(false);
     setTimeout(() => {
       setCopyText(true);
-    }, 2000);
+    }, 1000);
     navigator.clipboard.writeText("012345678");
     return () => clearTimeout();
   };
   return (
     <>
       <div className="w-full min-h-3xl pb-14 flex items-center pt-8 ">
-        <div className=" w-[96%] mx-auto py-8 rounded-[50px] h-full lg:w-5/6 px-4 lg:px-12 shadow-xl bg-zinc-100 shadow-black/20 flex flex-col items-center justify-center">
+        <div className=" w-[96%] mx-auto pt-4 pb-8 rounded-[50px] h-full lg:w-5/6 px-4 lg:px-12 shadow-xl bg-zinc-100 shadow-black/20 flex flex-col items-center justify-center">
           <div className="flex flex-col gap-3 items-center justify-center">
-            <motion.h3
-              initial={{ y: -40, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-3xl text-[#444337] "
-            >
-              Share{" "}
+            <div>
+              <motion.h3
+                initial={{ y: -40, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="text-xl text-[#444337] brush"
+              >
+                Share
+              </motion.h3>
               <span className="font-[parisienne] text-5xl text-[#516C56]">
                 Love
               </span>
-            </motion.h3>
+            </div>
             <motion.p
               initial={{ y: 40, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
@@ -60,7 +62,7 @@ const Gift = () => {
             <button
               className={` tracking-widest ${
                 activeButton === "button1"
-                  ? "border px-8 py-1 text-zinc-700 rounded-full shadow-md bg-[#e2ebe470]"
+                  ? "border px-8 py-1 text-zinc-200 rounded-full shadow-md bg-[#29819cc5]"
                   : "border px-8 py-1 text-zinc-400 rounded-full bg-zinc-100"
               }`}
               onClick={() => setActiveButton("button1")}
@@ -70,7 +72,7 @@ const Gift = () => {
             <button
               className={` tracking-widest ${
                 activeButton === "button2"
-                  ? "border px-8 py-1 text-zinc-700 rounded-full shadow-md bg-[#e2ebe470]"
+                  ? "border px-8 py-1 text-zinc-200 rounded-full shadow-md bg-[#023497ae]"
                   : "border px-8 py-1 text-zinc-400 rounded-full bg-zinc-100"
               }`}
               onClick={() => setActiveButton("button2")}
@@ -121,15 +123,15 @@ const Gift = () => {
                 ) : (
                   <button
                     onClick={bniClick}
-                    className="flex items-center rounded gap-1 mt-5 py-2 text-zinc-100 px-6 bg-[#465f4b] "
+                    className="flex items-center rounded gap-1 mt-5 py-2 text-zinc-100 px-4 bg-[#465f4b] "
                   >
                     <span className="text-sm tracking-wider">Disalin</span>
                   </button>
                 )}
                 <Link
-                  href="https://wasap.at/4qGwhd"
+                  href="https://dboard.webqodes.com"
                   target="_blank"
-                  className="flex items-center rounded gap-1 mt-5 py-2 text-zinc-100 px-6 bg-[#516C56] hover:bg-[#465f4b]"
+                  className="flex items-center rounded gap-1 mt-5 py-2 text-zinc-100 px-4 bg-[#516C56] hover:bg-[#465f4b]"
                 >
                   <BsWhatsapp size={18} />
                   <span className="text-sm tracking-wider">Konfirmasi</span>
@@ -180,15 +182,15 @@ const Gift = () => {
                 ) : (
                   <button
                     onClick={bcaClick}
-                    className="flex items-center rounded gap-1 mt-5 py-2 text-zinc-100 px-6 bg-[#465f4b]"
+                    className="flex items-center rounded gap-1 mt-5 py-2 text-zinc-100 px-4 bg-[#465f4b]"
                   >
                     <span className="text-sm tracking-wider">Disalin</span>
                   </button>
                 )}
                 <Link
-                  href="https://wasap.at/4qGwhd"
+                  href="https://dboard.webqodes.com"
                   target="_blank"
-                  className="flex items-center rounded gap-1 mt-5 py-2 text-zinc-100 px-6 bg-[#516C56] hover:bg-[#465f4b]"
+                  className="flex items-center rounded gap-1 mt-5 py-2 text-zinc-100 px-4 bg-[#516C56] hover:bg-[#465f4b]"
                 >
                   <BsWhatsapp size={18} />
                   <span className="text-sm tracking-wider">Konfirmasi</span>

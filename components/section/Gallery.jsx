@@ -19,18 +19,27 @@ const Gallery = () => {
         id="gallery"
         className="w-full bg-white min-h-3xl pt-6 pb-8 relative"
       >
-        <motion.div
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.3 }}
-          viewport={{ once: true }}
-          className="text-center w-full py-4 leading-relaxed"
-        >
+        <div className="text-center w-full py-4 leading-relaxed">
           <div className="flex items-center justify-center text-[#5e4833] text-xl sm:text-2xl">
-            <span className="alex p-1 text-3xl ">Happiness</span>{" "}
-            <span> Moments</span>
+            <motion.span
+              initial={{ x: 80 }}
+              whileInView={{ x: 0 }}
+              transition={{ duration: 0.7 }}
+              className="brush p-1 text-xl "
+            >
+              Happiness
+            </motion.span>{" "}
+            <motion.span
+              initial={{ x: -120 }}
+              whileInView={{ x: 0 }}
+              transition={{ duration: 0.4 }}
+              className="alex text-3xl"
+            >
+              {" "}
+              Moments
+            </motion.span>
           </div>
-        </motion.div>
+        </div>
         <LightGallery
           mode="lg-fade"
           speed={300}

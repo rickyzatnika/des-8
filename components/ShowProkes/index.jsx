@@ -36,14 +36,32 @@ const ShowProtocol = () => {
       >
         <div className=" w-full flex flex-col py-8 items-center shadow-xl rounded-xl shadow-black/20 bg-gradient-to-t from-zinc-200/60 to-white justify-between">
           <div className="text-md w-full   text-center ">
-            <h1 className="font-[Hattori] text-zinc-100 tracking-widest px-4 py-1 bg- w-fit mx-auto bg-[#524446] rounded-full">
+            <motion.h1
+              initial={{ y: 120 }}
+              whileInView={{ y: 0 }}
+              transition={{ duration: 0.3 }}
+              className="font-[Hattori] text-zinc-100 tracking-widest px-4 py-1 bg- w-fit mx-auto bg-[#524446] rounded-full"
+            >
               CORONAVIRUS
-            </h1>
-            <span className="text-[#524446]">PREVENTION</span>
+            </motion.h1>
+            <motion.p
+              initial={{ y: -90 }}
+              whileInView={{ y: 0 }}
+              transition={{ duration: 0.3 }}
+              className="text-[#524446]"
+            >
+              PREVENTION
+            </motion.p>
           </div>
           <div className=" py-4 grid grid-cols-2 px-3 items-center justify-center">
             {images.map((image) => (
-              <div key={image.id} className=" w-full h-full col-span-1 ">
+              <motion.div
+                initial={{ y: 60 }}
+                whileInView={{ y: 0 }}
+                transition={{ duration: 0.3 }}
+                key={image.id}
+                className=" w-full h-full col-span-1 "
+              >
                 <Image
                   src={image.src}
                   alt=""
@@ -53,7 +71,7 @@ const ShowProtocol = () => {
                   placeholder="blur"
                   blurDataURL={image.src}
                 />
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

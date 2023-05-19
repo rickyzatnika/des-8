@@ -5,7 +5,7 @@ import Image from "next/legacy/image";
 import { useForm } from "react-hook-form"
 import { GiLoveLetter } from 'react-icons/gi'
 import BackSound from '../components/Backsound';
-
+import { motion } from 'framer-motion';
 
 const GetUniqueCode = ({ guest }) => {
   const [isPlay, setIsPlay] = useState(false);
@@ -25,14 +25,12 @@ const GetUniqueCode = ({ guest }) => {
         status: selectedValue,
       })
       setLoading(true);
-      setTimeout(() => {
+      const timeoutId = setTimeout(() => {
         router.push(`/invitation/${uuid}?userId=${userId}`);
         setIsPlay(true);
-      }, 4000)
+      }, 2000)
 
-      return () => {
-        clearTimeout(setTimeout);
-      }
+      return () => clearTimeout(timeoutId);
 
     } catch (error) {
       console.log(error);
@@ -47,23 +45,27 @@ const GetUniqueCode = ({ guest }) => {
   return (
     <>
       <BackSound setIsPlay={setIsPlay} isPlay={isPlay} />
-      <div className="w-full bg-[url('/img/test.png')] bg-cover min-h-screen z-50 fixed top-0 lg:relative flex flex-col gap-4  items-center justify-evenly pt-28 ">
+      <motion.div
+        initial={{ x: 50 }}
+        animate={{ x: 0 }}
+        exit={{ opacity: 100 }}
+        transition={{ duration: 0.4, ease: "linear" }} className="overflow-hidden w-full bg-[url('/img/cover.png')] bg-cover min-h-screen z-50 fixed top-0 lg:relative flex flex-col gap-4  items-center justify-evenly pt-28 ">
 
         <div className="flex flex-col items-center">
 
         </div>
         <div className='flex items-center flex-col justify-center relative'>
-          <div className="flex text-[#516C56] pb-3 mt-6 gap-2 items-center">
+          <motion.div initial={{ y: -50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.4 }} className="flex text-[#516C56] pb-3 mt-6 gap-2 items-center">
             <h1 className='text-lg sm:text-xl '>Yanwar</h1>
-            <p>&</p>
+            <p className='alex text-4xl'>&</p>
             <h2 className='text-lg sm:text-xl '>Asri</h2>
+          </motion.div>
+          <div className=' w-full h-full absolute -bottom-44 -left-28 -z-10'>
+            <Image src="/img/bunga-2.png" alt='bunga' width={450} objectFit='contain' height={375} priority />
           </div>
-          <div className='bg-goyang w-full h-full absolute -bottom-44 -left-28 -z-10'>
-            <Image src="/img/bunga.png" alt='bunga' width={450} objectFit='contain' height={275} priority />
-          </div>
-          <div className='w-fit rounded-lg border px-8 py-1 text-center leading-relaxed'>
+          <div className='w-fit rounded-lg border px-8 py-3 sm:py-4 text-center leading-relaxed'>
             <h4 className='mb-2 text-sm sm:text-md text-zinc-700'>Kepada Yth, Bpk/Ibu/Saudara/i :</h4>
-            <p className='py-2 text-xl capitalize text-[#516C56] font-[Hattori] tracking-wide'>{guest?.name}</p>
+            <p className='py-2 text-lg capitalize text-[#516C56]'>{guest?.name}</p>
             <p className='text-zinc-700 text-sm sm:text-md'>Di Tempat.</p>
           </div>
           <form className='w-fit items-center justify-center flex flex-col' onSubmit={handleSubmit(formSubmit)}>
@@ -118,7 +120,7 @@ const GetUniqueCode = ({ guest }) => {
             )}
           </form>
         </div>
-      </div>
+      </motion.div>
     </>
   )
 }

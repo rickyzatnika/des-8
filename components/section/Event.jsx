@@ -19,11 +19,11 @@ const Event = ({ guest }) => {
   const router = useRouter();
 
   const { uuid } = router.query;
-
   const { register, handleSubmit } = useForm();
 
   const attendForm = async ({ status, present }) => {
     try {
+      setLoading(true);
       const userId = guest.userId;
       await axios.patch(
         `${process.env.NEXT_PUBLIC_PRO_URI}/invitation/status/${uuid}?userId=${userId}`,
@@ -33,31 +33,28 @@ const Event = ({ guest }) => {
         }
       );
       if (!status && selectedValue === "not Going") {
-        Swal.fire({
-          text: "Terimakasih Atas Perhatiannya 😊",
-          showConfirmButton: true,
-          showCloseButton: false,
-          confirmButtonColor: "#516C56",
-          hideClass: {
-            popup: "animate__animated animate__fadeOutUp",
-          },
-        });
+        const timeoutId = setTimeout(() => {
+          Swal.fire({
+            text: "Terimakasih Atas Perhatiannya 😊",
+            showConfirmButton: true,
+            confirmButtonColor: "#516C56",
+          });
+          setLoading(false);
+          setShowAttend(false);
+        }, 2000);
+        return () => setTimeout(timeoutId);
       } else {
-        Swal.fire({
-          text: "Terima Kasih Atas Perhatiannya 😊",
-          showConfirmButton: false,
-          showCloseButton: false,
-          showConfirmButton: true,
-          confirmButtonColor: "#a58b52",
-          showClass: {
-            popup: "animate__animated animate__zoomIn animate__delay-1s",
-          },
-          hideClass: {
-            popup: "animate__animated animate__fadeOutUp",
-          },
-        });
+        const timeoutId = setTimeout(() => {
+          Swal.fire({
+            text: "Terima Kasih Atas Perhatiannya 😊",
+            showConfirmButton: true,
+            confirmButtonColor: "#516C56",
+          });
+          setLoading(false);
+          setShowAttend(false);
+        }, 2000);
+        return () => clearTimeout(timeoutId);
       }
-      setShowAttend(false);
     } catch (error) {
       console.log(error);
     }
@@ -110,11 +107,14 @@ const Event = ({ guest }) => {
       {guest && guest?.status === "Opened" ? (
         <>
           {showAttend && (
-            <div className="w-full md:w-5/6 lg:w-2/6 min-h-screen bg-black/70  fixed z-[999999999] flex items-center justify-center px-2 top-0 right-0">
+            <div className="w-full md:w-5/6 lg:w-2/6 min-h-screen bg-black/70  fixed z-[999999999] flex items-center justify-center top-0 right-0">
               <motion.div
-                initial={{ y: -40 }}
+                initial={{ y: "-10%" }}
                 animate={{ y: 0 }}
-                transition={{ duration: 0.5, ease: "linear" }}
+                transition={{
+                  duration: 0.6,
+                  damping: 50,
+                }}
                 className="w-full h-auto px-2 "
               >
                 <form
@@ -141,11 +141,11 @@ const Event = ({ guest }) => {
                     <div className=" w-0 h-[2px] bg-[#516C56]" />
                   </div>
                   <div className="w-full leading-relaxed mb-3">
-                    <p className="mb-3 text-sm text-zinc-700 font-normal pl-1">
+                    <p className="mb-4 text-sm text-zinc-500  pl-1">
                       <span className="text-red-500">*</span> Pilih ya jika anda
                       akan menghadiri acara
                     </p>
-                    <div className="flex flex-col flex-nowrap gap-2 pl-2">
+                    <div className="flex flex-col flex-nowrap gap-2 px-4 pt-1">
                       <div className="flex flex-nowrap gap-1">
                         <input
                           type="radio"
@@ -155,7 +155,7 @@ const Event = ({ guest }) => {
                           checked={selectedValue === "going"}
                         />
                         <label
-                          className="text-zinc-700"
+                          className="text-zinc-700 text-sm sm:text-md"
                           onClick={(e) => {
                             e.preventDefault();
                             handleClick("going");
@@ -177,7 +177,7 @@ const Event = ({ guest }) => {
                             e.preventDefault();
                             handleClick("not Going");
                           }}
-                          className="text-zinc-700"
+                          className="text-zinc-700 text-sm sm:text-md"
                         >
                           Maaf, Saya tidak bisa hadir
                         </label>
@@ -209,18 +209,7 @@ const Event = ({ guest }) => {
                       className="py-3 rounded px-7 w-full text-white/80 bg-[#516C56]  hover:bg-[#4b644f]"
                       type="submit"
                     >
-                      {loading ? (
-                        <>
-                          <div className="flex items-center justify-center gap-2 w-full">
-                            <span>Loading...</span>
-                            <div className="border-2  p-2  border-zinc-300  bg-clip-border animate-spin rounded-full relative overflow-x-hidden">
-                              <span className="absolute top-0 right-0 h-2 w-2  bg-green-400 rounded-full z-10"></span>
-                            </div>
-                          </div>
-                        </>
-                      ) : (
-                        <span className="text-zinc-200"> Kirim</span>
-                      )}
+                      {loading ? <span>Loading...</span> : <span>Kirim</span>}
                     </button>
                   )}
                 </form>
