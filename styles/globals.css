@@ -142,7 +142,6 @@
 /* blog page style */
 .post:nth-child(2n + 1) {
   flex-direction: row-reverse;
-  gap: 0px;
 }
 .img {
   flex: 2;

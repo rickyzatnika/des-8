@@ -37,7 +37,7 @@ const Story = () => {
         <div className="posts pt-14 flex flex-wrap-reverse flex-col gap-10 md:gap-12">
           {data?.map((post, i) => (
             <div
-              className="post flex flex-wrap-reverse flex-row gap-2 md:gap-3"
+              className="post flex flex-wrap-reverse flex-row gap-5 "
               key={i}
             >
               <div className="img">
