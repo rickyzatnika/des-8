@@ -142,6 +142,7 @@
 /* blog page style */
 .post:nth-child(2n + 1) {
   flex-direction: row-reverse;
+  gap: 0px;
 }
 .img {
   flex: 2;
@@ -161,8 +162,15 @@
   width: 260px;
   height: 190px;
   z-index: -1;
+  opacity: 0.5;
 }
 
 .content {
   flex: 3;
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex: 4;
+  }
 }

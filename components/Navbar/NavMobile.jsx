@@ -58,11 +58,11 @@ const NavMobile = () => {
     <nav
       className={
         activeSection && document.querySelector(`#${activeSection}`)
-          ? "w-full opacity-100 px-2 scale-100 flex lg:hidden fixed bottom-3 z-40 transition-all duration-300 ease-linear"
+          ? "w-full opacity-100 backdrop-blur-[2px] rounded-full px-0 scale-100 flex lg:hidden antialiased fixed bottom-3 z-[9999] transition-all duration-300 ease-linear"
           : "scale-0 opacity-0 transition-all duration-300 ease-linear"
       }
     >
-      <ul className="w-full  bg-zinc-300/80 backdrop-blur flex items-center justify-around rounded-full h-full py-2  px-6">
+      <ul className="w-full antialiased bg-zinc-200/90  flex items-center justify-around rounded-full h-full py-2  px-6">
         <li
           className={`relative group flex  flex-col-reverse items-center justify-center ${
             activeSection === "header" ? "text-zinc-800/90" : ""

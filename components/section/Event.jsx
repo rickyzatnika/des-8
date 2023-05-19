@@ -13,6 +13,7 @@ const Event = ({ guest }) => {
   const [displayed, setDisplayed] = useState(false);
   // const [showQrCode, setShowQrCode] = useState(false);
   const [showAttend, setShowAttend] = useState(false);
+  const [show, setShow] = useState(false);
   const [loading, setLoading] = useState(false);
   const [selectedValue, setSelectedValue] = useState("");
   const router = useRouter();
@@ -33,13 +34,10 @@ const Event = ({ guest }) => {
       );
       if (!status && selectedValue === "not Going") {
         Swal.fire({
-          text: "Terima Kasih Atas Perhatiannya 😊",
+          text: "Terimakasih Atas Perhatiannya 😊",
           showConfirmButton: true,
           showCloseButton: false,
-          confirmButtonColor: "#a58b52",
-          showClass: {
-            popup: "animate__animated animate__zoomIn animate__delay-1s",
-          },
+          confirmButtonColor: "#516C56",
           hideClass: {
             popup: "animate__animated animate__fadeOutUp",
           },
@@ -112,25 +110,35 @@ const Event = ({ guest }) => {
       {guest && guest?.status === "Opened" ? (
         <>
           {showAttend && (
-            <div className="w-full md:w-5/6 lg:w-2/6 min-h-screen bg-black/70 backdrop-blur-sm fixed z-[999999999] flex items-center justify-center px-2 top-0 right-0">
+            <div className="w-full md:w-5/6 lg:w-2/6 min-h-screen bg-black/70  fixed z-[999999999] flex items-center justify-center px-2 top-0 right-0">
               <motion.div
                 initial={{ y: -40 }}
                 animate={{ y: 0 }}
                 transition={{ duration: 0.5, ease: "linear" }}
-                className="w-full h-auto px-2"
+                className="w-full h-auto px-2 "
               >
                 <form
                   onSubmit={handleSubmit(attendForm)}
-                  className="w-full relative shadow-xl shadow-black/30 bg-white rounded z-50 h-auto  px-2 pt-10 pb-20 flex flex-col items-center justify-center gap-3"
+                  className="w-full relative  shadow-xl overflow-hidden shadow-black/30 bg-white rounded z-50 h-auto  px-3 pt-10 pb-10 flex flex-col items-center justify-center gap-3"
                 >
+                  <div className="absolute z-40 -top-2 -right-2 opacity-80 bg-goyang">
+                    <Image
+                      src="/img/bunga-hijau.png"
+                      alt=""
+                      width={100}
+                      height={100}
+                      priority
+                      objectFit="cover"
+                    />
+                  </div>
                   <div className="w-full flex items-center justify-between pb-8">
-                    <h3 className="text-xl text-zinc-800">
-                      Konfirmasi{" "}
-                      <span className="font-[parisienne] text-3xl text-[#c79d43]">
+                    <div className="flex flex-col">
+                      <h3 className="text-xl text-zinc-800">Konfirmasi</h3>
+                      <span className="alex text-3xl relative left-10 text-[#516C56]">
                         Kehadiran
                       </span>
-                    </h3>
-                    <div className=" w-24 h-[2px] bg-[#be9d54]" />
+                    </div>
+                    <div className=" w-0 h-[2px] bg-[#516C56]" />
                   </div>
                   <div className="w-full leading-relaxed mb-3">
                     <p className="mb-3 text-sm text-zinc-700 font-normal pl-1">
@@ -178,23 +186,27 @@ const Event = ({ guest }) => {
                   </div>
                   {selectedValue === "going" && (
                     <div className="mb-3 w-full">
-                      <h3 className="mb-2 text-lg text-zinc-600">
-                        Berapa Orang yang Hadir :
+                      <h3 className="mb-2 text-md tracking-wider text-center text-zinc-800">
+                        RSVP
                       </h3>
                       <select
-                        className="w-full text-[#444337] py-3 px-2 border-none outline-none rounded focus:outline-[#9c8450]"
+                        className="w-full text-sm text-[#444337] py-3 px-2 border-none outline-none rounded focus:outline-[#516C56]"
                         {...register("present", { required: true })}
                       >
+                        <option value="" style={{ display: "none" }}>
+                          pilih
+                        </option>
                         <option value="1">1 Orang</option>
                         <option value="2">2 Orang</option>
                         <option value="3">3 Orang</option>
+                        <option value="lebih dari 3">lebih dari 3 Orang</option>
                       </select>
                     </div>
                   )}
 
                   {selectedValue && (
                     <button
-                      className="py-3 rounded px-7 w-full text-white/80 bg-[#a58b52]  hover:bg-[#867041]"
+                      className="py-3 rounded px-7 w-full text-white/80 bg-[#516C56]  hover:bg-[#4b644f]"
                       type="submit"
                     >
                       {loading ? (

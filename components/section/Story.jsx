@@ -53,10 +53,10 @@ const Story = () => {
               </div>
               <div className="content flex flex-col justify-around items-start gap-4">
                 <div className="title space-y-2 leading-relaxed">
-                  <h1 className="text-xl text-zinc-300 md:text-2xl">
+                  <h1 className="text-lg text-[#516C56] md:text-xl">
                     {post?.title}
                   </h1>
-                  <div className="text-zinc-500 text-sm">
+                  <div className="text-zinc-500 leading-relaxed text-sm">
                     {post?.description}
                   </div>
                 </div>
