@@ -169,7 +169,23 @@
 }
 
 @media (max-width: 768px) {
+  .post:nth-child(2n + 1) {
+    flex-direction: column-reverse;
+    text-align: right;
+  }
   .content {
-    flex: 4;
+    flex: 1;
+  }
+  .img {
+    flex: 1;
+    margin: auto;
+    padding: 0 60px 0 60px;
+    padding-top: 5px;
+  }
+
+  .img::after {
+    bottom: -130px;
+    left: -45px;
+    transform: rotateY(45deg);
   }
 }
