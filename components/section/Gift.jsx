@@ -138,14 +138,14 @@ const Gift = () => {
             </div>
           )}
           {activeButton === "button2" && (
-            <div className="flex flex-col items-center justify-center ">
+            <div className="flex flex-col items-center pt-[1.6rem] justify-center ">
               <div className="w-full h-full flex flex-col items-center justify-center">
                 <div className="flex items-center flex-col">
                   <Image
                     src="/image/bca.png"
                     alt=""
                     width={100}
-                    height={75}
+                    height={50}
                     objectFit="contain"
                     objectPosition="top"
                     priority
