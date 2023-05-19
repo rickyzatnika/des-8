@@ -46,7 +46,7 @@ const Story = () => {
             initial={{ x: 80 }}
             whileInView={{ x: 0 }}
             transition={{ duration: 0.7 }}
-            className="p-1 text-xl brush "
+            className="p-1 text-3xl brush "
           >
             Short
           </motion.span>{" "}
@@ -54,7 +54,7 @@ const Story = () => {
             initial={{ x: -120 }}
             whileInView={{ x: 0 }}
             transition={{ duration: 0.4 }}
-            className="alex text-3xl"
+            className="alex text-4xl"
           >
             {" "}
             Story

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import Image from "next/legacy/image";
 import { motion, useAnimation } from "framer-motion";
 
@@ -8,39 +8,10 @@ import { SlSocialInstagram } from "react-icons/sl";
 import "animate.css";
 
 const Profile = () => {
-  const sectionRef = useRef(null);
-  const controls = useAnimation();
-
-  useEffect(() => {
-    const section = sectionRef.current;
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.clientHeight;
-
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-
-      if (
-        scrollPosition >= sectionTop &&
-        scrollPosition < sectionTop + sectionHeight
-      ) {
-        controls.start({ opacity: 1, y: 0, scale: 1 }); // Terapkan animasi di sini
-      } else {
-        controls.start({ opacity: 1, y: 40, scale: 0.8 }); // Reset animasi saat section tidak terlihat
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [controls]);
-
   return (
     <div
       className="w-full min-h-screen bg-white flex flex-col items-center justify-center py-10 lg:justify-between relative "
       id="profile"
-      ref={sectionRef}
     >
       {/* {showQrCode && <GetQrCode setShowQrCode={setShowQrCode} />} */}
 
@@ -48,8 +19,9 @@ const Profile = () => {
         <div className="flex shadow-md  overflow-hidden w-fit bg-zinc-100/60 p-6 sm:p-8 px-10 sm:px-14 shadow-black/20 flex-col justify-center gap-5 items-center relative mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
-            animate={controls}
-            transition={{ duration: 0.2 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4 }}
             className="animated-element absolute -bottom-8 -left-4 w-full"
           >
             <Image
@@ -63,7 +35,8 @@ const Profile = () => {
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
-            animate={controls}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.2 }}
           >
             <Image
@@ -79,7 +52,8 @@ const Profile = () => {
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
-            animate={controls}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.2 }}
             className="animated-element flex flex-col gap-2 items-center justify-center px-4"
           >
@@ -109,7 +83,8 @@ const Profile = () => {
         <div className="relative overflow-hidden shadow-md bg-zinc-100/60 p-6 sm:p-8 px-10 sm:px-14 w-fit shadow-black/20  flex flex-col items-center justify-center gap-5">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
-            animate={controls}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.3 }}
             className="absolute -bottom-8 -right-8 rotate-180"
           >
@@ -124,7 +99,8 @@ const Profile = () => {
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 30, scale: 0.5 }}
-            animate={controls}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <Image
@@ -140,7 +116,8 @@ const Profile = () => {
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={controls}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.4 }}
             className="flex flex-col gap-2 items-center justify-center px-4"
           >

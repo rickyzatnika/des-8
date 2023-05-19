@@ -6,6 +6,12 @@
 ::-webkit-scrollbar {
   display: none !important;
 }
+@font-face {
+  font-family: "parisienne";
+  font-weight: 400;
+  src: local("parisienne"),
+    url("/fonts/parisienne-regular.ttf") format("truetype");
+}
 
 body {
   font-family: "Nunito", sans-serif;

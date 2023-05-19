@@ -38,7 +38,7 @@ const Gift = () => {
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="text-xl text-[#444337] brush"
+                className="text-3xl text-[#444337] brush"
               >
                 Share
               </motion.h3>

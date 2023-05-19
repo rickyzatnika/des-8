@@ -25,7 +25,7 @@ const Gallery = () => {
               initial={{ x: 80 }}
               whileInView={{ x: 0 }}
               transition={{ duration: 0.7 }}
-              className="brush p-1 text-xl "
+              className="brush p-1 text-3xl "
             >
               Happiness
             </motion.span>{" "}
@@ -33,7 +33,7 @@ const Gallery = () => {
               initial={{ x: -120 }}
               whileInView={{ x: 0 }}
               transition={{ duration: 0.4 }}
-              className="alex text-3xl"
+              className="alex text-4xl"
             >
               {" "}
               Moments
