@@ -6,7 +6,7 @@ const Wish = ({ guest, posts }) => {
     <>
       <div className="w-full min-h-screen" id="wish">
         <CommentForm guest={guest} />
-        <div className="w-full py-10 relative overflow-y-scroll h-[85%] bg-[#191919] pl-3 lg:px-10 ">
+        <div className="w-full pt-10 pb-14 relative overflow-y-scroll h-[95%] bg-[#191919] pl-3 lg:px-10 ">
           <h2 className="text-zinc-100">
             {posts?.length + 1} <span className="italic">Post Comment</span>
           </h2>

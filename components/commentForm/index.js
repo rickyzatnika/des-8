@@ -57,7 +57,7 @@ const CommentForm = ({ guest }) => {
     <>
       <div
         id="wish"
-        className=" shadow-xl overflow-hidden pb-20  shadow-black/10 px-1 lg:px-3 relative bg-[#181818]"
+        className=" shadow-xl overflow-hidden pb-10  shadow-black/10 px-1 lg:px-3 relative bg-[#181818]"
       >
         <div className="absolute top-8  -right-12">
           <Image src="/img/bunga-2.png" alt="" width={200} height={175} objectFit="cover" />
