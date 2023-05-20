@@ -84,7 +84,7 @@ const Story = () => {
               </motion.div>
               <div className="content flex flex-col justify-around items-start gap-4">
                 <div className="title space-y-2 leading-relaxed">
-                  <h1 className="text-md brush text-[#a5876c] md:text-xl">
+                  <h1 className="text-xl brush text-[#a5876c]">
                     {post?.title}
                   </h1>
                   <div className="text-zinc-500 leading-relaxed text-sm">
