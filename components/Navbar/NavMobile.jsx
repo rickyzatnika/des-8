@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { ImProfile } from "react-icons/im";
+
 import { animateScroll as scroll } from "react-scroll";
 import {
   FcAbout,

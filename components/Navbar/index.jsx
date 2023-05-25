@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { animateScroll as scroll } from "react-scroll";
-import { motion } from "framer-motion";
+
 import {
   FcAbout,
   FcBusinessContact,
@@ -68,10 +68,7 @@ const Navbar = () => {
             activeSection === "header" ? "text-zinc-800/90" : ""
           }`}
         >
-          <motion.span
-            initial={{ opacity: 0, x: -10 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.3 }}
+          <span
             className={
               activeSection === "header"
                 ? "block left-6 text-sm absolute bg-zinc-200/80 px-2 rounded-full"
@@ -79,7 +76,7 @@ const Navbar = () => {
             }
           >
             Invitation
-          </motion.span>
+          </span>
           <Link
             href="#header"
             className="nav-link"
@@ -93,10 +90,7 @@ const Navbar = () => {
             activeSection === "profile" ? "text-zinc-800/90" : ""
           }`}
         >
-          <motion.span
-            initial={{ opacity: 0, x: -10 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.3 }}
+          <span
             className={
               activeSection === "profile"
                 ? "block left-6 text-sm absolute bg-zinc-200/80 px-2 rounded-full"
@@ -104,7 +98,7 @@ const Navbar = () => {
             }
           >
             Profile
-          </motion.span>
+          </span>
           <Link
             href="#profile"
             className="nav-link"
@@ -118,10 +112,7 @@ const Navbar = () => {
             activeSection === "event" ? "text-zinc-800/90" : ""
           }`}
         >
-          <motion.span
-            initial={{ opacity: 0, x: -10 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.3 }}
+          <span
             className={
               activeSection === "event"
                 ? "block  left-6 text-sm absolute bg-zinc-200/80 px-2 rounded-full"
@@ -129,7 +120,7 @@ const Navbar = () => {
             }
           >
             Event
-          </motion.span>
+          </span>
           <Link
             href="#event"
             className="nav-link"
@@ -143,10 +134,7 @@ const Navbar = () => {
             activeSection === "gallery" ? "text-zinc-800/90" : ""
           }`}
         >
-          <motion.span
-            initial={{ opacity: 0, x: -10 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.3 }}
+          <span
             className={
               activeSection === "gallery"
                 ? "block  left-6 text-sm absolute bg-zinc-200/80 px-2 rounded-full"
@@ -154,7 +142,7 @@ const Navbar = () => {
             }
           >
             Gallery
-          </motion.span>
+          </span>
           <Link
             href="#gallery"
             className="nav-link"
@@ -169,10 +157,7 @@ const Navbar = () => {
             activeSection === "wish" ? "text-zinc-800/90" : ""
           }`}
         >
-          <motion.span
-            initial={{ opacity: 0, x: -10 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.3 }}
+          <span
             className={
               activeSection === "wish"
                 ? "block  left-6 text-sm absolute bg-zinc-200/80 px-2 rounded-full"
@@ -180,7 +165,7 @@ const Navbar = () => {
             }
           >
             Wish
-          </motion.span>
+          </span>
           <Link
             href="#wish"
             className="nav-link"

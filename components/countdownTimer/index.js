@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
+import Container from "../AOS";
 
 export default function CountDownTimer({ ...props }) {
   const [timerDays, setTimerDays] = useState("00");
@@ -42,80 +42,80 @@ export default function CountDownTimer({ ...props }) {
 
   return (
     <>
-      <div className="w-full flex flex-col item-center justify-center gap-4">
-        <motion.div
-          initial={{ y: -50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center rounded-tl-[30%] rounded-br-[40%] flex flex-col pb-3 justify-center items-center shadow-xl mx-auto  bg-gradient-to-br w-32 sm:w-36  h-32 sm:h-36 from-emerald-800/10 via-zinc-50 to-emerald-900/10 overflow-hidden  clip"
-        >
-          {/* Timer Days */}
-          <div className=" text-3xl sm:text-4xl m-auto  flex items-center justify-center">
-            <span className="bg-gradient-to-b from-[#516C56] via-[#a2c7a9] to-[#516C56] bg-clip-text text-transparent">
-              {timerDays}
-            </span>
+      <Container>
+        <div className="w-full flex flex-col item-center justify-center gap-4">
+          <div
+            data-aos="fade-down"
+            data-aos-duration="1200"
+            data-aos-easing="ease-in-out"
+            className="text-center rounded-tl-[30%] rounded-br-[40%] flex flex-col pb-3 justify-center items-center shadow-xl mx-auto  bg-gradient-to-br w-32 sm:w-36  h-32 sm:h-36 from-emerald-800/10 via-zinc-50 to-emerald-900/10 overflow-hidden  clip"
+          >
+            {/* Timer Days */}
+            <div className=" text-3xl sm:text-4xl m-auto  flex items-center justify-center">
+              <span className="bg-gradient-to-b from-[#516C56] via-[#a2c7a9] to-[#516C56] bg-clip-text text-transparent">
+                {timerDays}
+              </span>
+            </div>
+            <small className="w-full  text-center text-[#516C56]/80 aboreto text-lg">
+              Hari
+            </small>
           </div>
-          <small className="w-full  text-center text-[#516C56]/80 aboreto text-lg">
-            Hari
-          </small>
-        </motion.div>
-        <div className="w-full px-1 gap-2 flex items-center justify-center h-full">
+          <div className="w-full px-1 gap-2 flex items-center justify-center h-full">
 
 
-          {/* Timer Hours */}
-          <motion.div
-            initial={{ y: 50, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4 }}
-            className="text-center rounded-tl-[30%] rounded-br-[40%] flex flex-col pb-2 shadow-xl  bg-gradient-to-br w-24 sm:w-28  h-24 sm:h-28 from-emerald-800/10 via-zinc-50 to-emerald-900/10 overflow-hidden  clip"
-          >
-            <div className=" text-2xl sm:text-3xl m-auto  flex items-center justify-center">
-              <span className="bg-gradient-to-b from-[#516C56] via-[#a2c7a9] to-[#516C56] bg-clip-text text-transparent">
-                {timerHours}
-              </span>
+            {/* Timer Hours */}
+            <div
+              data-aos="fade-left"
+              data-aos-duration="1200"
+              data-aos-offset="200"
+              data-aos-easing="ease-in-out"
+              className="text-center rounded-tl-[30%] rounded-br-[40%] flex flex-col pb-2 shadow-xl  bg-gradient-to-br w-24 sm:w-28  h-24 sm:h-28 from-emerald-800/10 via-zinc-50 to-emerald-900/10 overflow-hidden  clip"
+            >
+              <div className=" text-2xl sm:text-3xl m-auto  flex items-center justify-center">
+                <span className="bg-gradient-to-b from-[#516C56] via-[#a2c7a9] to-[#516C56] bg-clip-text text-transparent">
+                  {timerHours}
+                </span>
+              </div>
+              <small className="w-full  text-center text-[#516C56]/80  text-sm ">
+                Jam
+              </small>
             </div>
-            <small className="w-full  text-center text-[#516C56]/80  text-sm ">
-              Jam
-            </small>
-          </motion.div>
-          {/* Timer Minutes */}
-          <motion.div
-            initial={{ y: 50, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4 }}
-            className="text-center rounded-tl-[30%] rounded-br-[40%] flex flex-col pb-2 shadow-xl  bg-gradient-to-br w-24 sm:w-28  h-24 sm:h-28 from-emerald-800/10 via-zinc-50 to-emerald-900/10 overflow-hidden  clip"
-          >
-            <div className=" text-2xl sm:text-3xl m-auto  flex items-center justify-center">
-              <span className="bg-gradient-to-b from-[#516C56] via-[#a2c7a9] to-[#516C56] bg-clip-text text-transparent">
-                {timerMinutes}
-              </span>
+            {/* Timer Minutes */}
+            <div
+              data-aos="fade-up"
+              data-aos-duration="1400"
+              data-aos-easing="ease-in-out"
+              className="text-center rounded-tl-[30%] rounded-br-[40%] flex flex-col pb-2 shadow-xl  bg-gradient-to-br w-24 sm:w-28  h-24 sm:h-28 from-emerald-800/10 via-zinc-50 to-emerald-900/10 overflow-hidden  clip"
+            >
+              <div className=" text-2xl sm:text-3xl m-auto  flex items-center justify-center">
+                <span className="bg-gradient-to-b from-[#516C56] via-[#a2c7a9] to-[#516C56] bg-clip-text text-transparent">
+                  {timerMinutes}
+                </span>
+              </div>
+              <small className="w-full  text-center text-[#516C56]/80  text-sm ">
+                Menit
+              </small>
             </div>
-            <small className="w-full  text-center text-[#516C56]/80  text-sm ">
-              Menit
-            </small>
-          </motion.div>
-          {/* Timer Second */}
-          <motion.div
-            initial={{ y: 50, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4 }}
-            className="text-center rounded-tl-[30%] rounded-br-[40%] flex flex-col pb-2 shadow-xl  bg-gradient-to-br w-24 sm:w-28  h-24 sm:h-28  from-emerald-800/10 via-zinc-50 to-emerald-900/10 overflow-hidden  clip"
-          >
-            <div className=" text-2xl sm:text-3xl m-auto  flex items-center justify-center">
-              <span className="bg-gradient-to-b from-[#516C56] via-[#a2c7a9] to-[#516C56] bg-clip-text text-transparent">
-                {timerSeconds}
-              </span>
+            {/* Timer Second */}
+            <div
+              data-aos="fade-right"
+              data-aos-duration="1200"
+              data-aos-offset="200"
+              data-aos-easing="ease-in-out"
+              className="text-center rounded-tl-[30%] rounded-br-[40%] flex flex-col pb-2 shadow-xl  bg-gradient-to-br w-24 sm:w-28  h-24 sm:h-28  from-emerald-800/10 via-zinc-50 to-emerald-900/10 overflow-hidden  clip"
+            >
+              <div className=" text-2xl sm:text-3xl m-auto  flex items-center justify-center">
+                <span className="bg-gradient-to-b from-[#516C56] via-[#a2c7a9] to-[#516C56] bg-clip-text text-transparent">
+                  {timerSeconds}
+                </span>
+              </div>
+              <small className="w-full  text-center text-[#516C56]/80 first-letter text-sm ">
+                Detik
+              </small>
             </div>
-            <small className="w-full  text-center text-[#516C56]/80 first-letter text-sm ">
-              Detik
-            </small>
-          </motion.div>
+          </div>
         </div>
-      </div>
+      </Container>
     </>
   );
 }

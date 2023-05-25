@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/legacy/image";
-import { motion } from "framer-motion";
-
+import Container from "../AOS";
 const data = [
   {
     id: 1,
@@ -29,73 +28,83 @@ const data = [
 const Story = () => {
   return (
     <>
-      <div id="gallery" className="w-full  mx-auto md:px-3 px-2 py-8">
-        <div className="flex relative items-center justify-center text-[#5e4833] ">
-          <div className="absolute -left-4 bg-goyang -bottom-10 ">
-            <Image
-              src="/img/bunga-2.png"
-              alt=""
-              width={145}
-              height={145}
-              objectFit="cover"
-              className="rotate-90 "
-              priority
-            />
-          </div>
-          <motion.span
-            initial={{ x: 80 }}
-            whileInView={{ x: 0 }}
-            transition={{ duration: 0.7 }}
-            className="p-1 text-3xl brush "
-          >
-            Short
-          </motion.span>{" "}
-          <motion.span
-            initial={{ x: -120 }}
-            whileInView={{ x: 0 }}
-            transition={{ duration: 0.4 }}
-            className="alex text-4xl"
-          >
-            {" "}
-            Story
-          </motion.span>
-        </div>
-        <div className="posts overflow-hidden pt-14 flex flex-wrap-reverse flex-col gap-10 md:gap-12">
-          {data?.map((post, i) => (
-            <div
-              className="post flex flex-wrap-reverse flex-col-reverse sm:flex-row gap-3 "
-              key={i}
+      <Container>
+        <div id="gallery" className="w-full  mx-auto md:px-3 px-2 py-8">
+          <div className="flex relative items-center justify-center text-[#5e4833] ">
+            <div className="absolute -left-4 bg-goyang -bottom-10 ">
+              <Image
+                src="/img/bunga-2.png"
+                alt=""
+                width={145}
+                height={145}
+                objectFit="cover"
+                className="rotate-90 "
+                priority
+              />
+            </div>
+            <span
+              data-aos="fade-left"
+              data-aos-duration="1200"
+              data-aos-easing="ease-in-out"
+              className="p-1 text-3xl brush "
             >
-              <motion.div
-                initial={{ y: 30 }}
-                whileInView={{ y: 0 }}
-                transition={{ duration: 0.4 }}
-                className="img"
+              Short
+            </span>{" "}
+            <span
+              data-aos="fade-right"
+              data-aos-duration="1200"
+              data-aos-easing="ease-in-out"
+              className="alex text-4xl"
+            >
+              {" "}
+              Story
+            </span>
+          </div>
+          <div className="posts overflow-hidden pt-14 flex flex-wrap-reverse flex-col gap-10 md:gap-12">
+            {data?.map((post, i) => (
+              <div
+                className="post flex flex-wrap-reverse flex-col-reverse sm:flex-row gap-3 "
+                key={i}
               >
-                <Image
-                  src={post?.image}
-                  alt={post?.title}
-                  width={1000}
-                  height={1000}
-                  objectFit="cover"
-                  className="rounded-tr-[35%] rounded-bl-[35%]"
-                  priority
-                />
-              </motion.div>
-              <div className="content flex flex-col justify-around items-start gap-4">
-                <div className="title space-y-2 leading-relaxed">
-                  <h1 className="text-xl brush text-[#a5876c]">
-                    {post?.title}
-                  </h1>
-                  <div className="text-zinc-500 leading-relaxed text-sm">
-                    {post?.description}
+                <div className="img">
+                  <Image
+                    data-aos="zoom-in"
+                    data-aos-duration="1200"
+                    data-aos-easing="ease-in-out"
+                    src={post?.image}
+                    alt={post?.title}
+                    width={1000}
+                    height={1000}
+                    objectFit="cover"
+                    className="rounded-tr-[35%] rounded-bl-[35%]"
+                    priority
+                  />
+                </div>
+                <div className="content flex flex-col justify-around items-start gap-4">
+                  <div className="title space-y-2 leading-relaxed">
+                    <h1
+                      data-aos="fade-right"
+                      data-aos-duration="1200"
+                      data-aos-easing="ease-in-out"
+                      className="text-xl brush text-[#a5876c]"
+                    >
+                      {post?.title}
+                    </h1>
+                    <div
+                      data-aos="fade-up"
+                      data-aos-duration="1200"
+                      data-aos-easing="ease-in-out"
+                      className="text-zinc-500 leading-relaxed text-sm"
+                    >
+                      {post?.description}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
+      </Container>
     </>
   );
 };

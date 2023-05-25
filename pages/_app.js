@@ -2,7 +2,6 @@ import "../styles/globals.css";
 import { useState, useEffect } from "react";
 import { Layout } from "../components";
 import Head from "next/head";
-import { AnimatePresence } from "framer-motion";
 
 export default function App({ Component, pageProps }) {
   const [showChild, setShowChild] = useState(false);
@@ -29,11 +28,11 @@ export default function App({ Component, pageProps }) {
           <meta property="og:description" content="Webhouse Invitation - Buat undangan pernikahanmu yang spesial dengan web undangan kami. Temukan desain dan pilihan yang sesuai dengan kebutuhanmu." />
           <meta property="og:url" content="https://amade.vercel.app" />
         </Head>
-        <AnimatePresence mode="wait">
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
-        </AnimatePresence>
+
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+
       </>
     );
   }
