@@ -6,7 +6,6 @@ import Container from "../AOS";
 import Slick from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Canvas from "../canvas/Canvas";
 
 const Aside = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -23,7 +22,6 @@ const Aside = () => {
 
   return (
     <>
-      <Canvas />
       <Container>
         <div className="w-full relative min-h-screen hidden lg:flex flex-col items-center justify-center">
           <div className="fixed z-5 top-0 left-0 bg-gradient-to-l from-black via-transparent to-black w-full h-full"></div>
