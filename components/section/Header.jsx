@@ -28,7 +28,7 @@ const Header = () => {
               data-aos="fade-down"
               data-aos-duration="1000"
               data-aos-easing="ease-in-out"
-              className="text-zinc-300/80  text-md sm:text-xl"
+              className="text-zinc-300/80 title text-md sm:text-xl"
             >
               The Wedding Of
             </h1>
@@ -37,7 +37,7 @@ const Header = () => {
                 data-aos="fade-up"
                 data-aos-duration="1200"
                 data-aos-easing="ease-in-out"
-                className="text-4xl sm:text-5xl  px-2 font-extrabold bg-gradient-to-t from-[#516C56] via-emerald-500 font-[parisienne] to-emerald-900 bg-clip-text text-transparent py-2 "
+                className="text-4xl sm:text-5xl  px-2 font-extrabold bg-gradient-to-t from-[#516C56] via-emerald-600 great to-emerald-900 bg-clip-text text-transparent py-2 "
               >
                 Yanwar
               </h3>
@@ -53,7 +53,7 @@ const Header = () => {
                 data-aos="fade-down"
                 data-aos-duration="1200"
                 data-aos-easing="ease-in-out"
-                className="text-4xl sm:text-5xl  px-2 font-extrabold bg-gradient-to-b from-[#516C56] via-emerald-500 font-[parisienne] to-emerald-900  bg-clip-text text-transparent py-2"
+                className="text-4xl sm:text-5xl  px-2 font-extrabold bg-gradient-to-b from-[#516C56] via-emerald-600 great to-emerald-900  bg-clip-text text-transparent py-2"
               >
                 Asri
               </h4>

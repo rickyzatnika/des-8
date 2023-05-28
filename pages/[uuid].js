@@ -57,10 +57,10 @@ const GetUniqueCode = ({ guest }) => {
               data-aos="fade-up"
               data-aos-duration="1000"
               data-aos-easing="ease-in-out"
-              className="flex text-[#516C56] pb-3 mt-6 gap-2 items-center">
-              <h1 className='text-lg sm:text-xl '>Yanwar</h1>
-              <p className='alex text-4xl'>&</p>
-              <h2 className='text-lg sm:text-xl '>Asri</h2>
+              className="flex text-[#516C56] pb-3 my-6 gap-2 items-center">
+              <h1 className='text-4xl sm:text-4xl great'>Yanwar</h1>
+              <p className='brush text-4xl great'>&</p>
+              <h2 className='text-4xl sm:text-4xl great'>Asri</h2>
             </div>
             <div className=' w-full h-full absolute -bottom-44 -left-28 -z-10'>
               <Image src="/img/bunga-2.png" alt='bunga' width={450} objectFit='contain' height={375} priority />

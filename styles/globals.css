@@ -21,8 +21,19 @@ body {
   font-family: "Yellowtail", cursive;
 }
 
+.mont {
+  font-family: "Montserrat", sans-serif;
+}
+
 .brush {
   font-family: "Alex Brush", cursive;
+}
+
+.great {
+  font-family: "Great Vibes", cursive;
+}
+.title {
+  font-family: "Playfair Display SC", serif;
 }
 
 .mouse {

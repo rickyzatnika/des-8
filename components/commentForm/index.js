@@ -64,20 +64,22 @@ const CommentForm = ({ guest }) => {
           <div
             data-aos="zoom-in"
             data-aos-duration="1200"
-            data-aos-easing="ease-in-out"
+
             className="absolute top-8  -right-12">
             <Image src="/img/bunga-2.png" alt="" width={200} height={175} objectFit="cover" />
           </div>
-          <div className="pt-9 text-left">
+          <div className="pt-9 flex gap-1 text-left">
             <h3 data-aos="fade-up"
-              data-aos-duration="1200"
-              data-aos-easing="ease-in-out" className="text-xl text-zinc-300 ">
-              Pesan{" "}
-              <span className="font-[parisienne] text-4xl text-zinc-300/80">
-                &
-              </span>{" "}
-              Harapan
+              data-aos-duration="1000"
+              className="text-lg text-zinc-300 ">
+              Pesan
             </h3>
+            <span data-aos="fade-up"
+              data-aos-duration="1000" className="great text-4xl text-zinc-300/80">
+              &
+            </span>
+            <h4 className="text-lg pl-1 text-zinc-300" data-aos="fade-up"
+              data-aos-duration="1000"> Harapan</h4>
             {/* <p className="text-zinc-400/80 text-sm">
             Berikan do`a dan ucapan terbaik untuk kami
           </p> */}

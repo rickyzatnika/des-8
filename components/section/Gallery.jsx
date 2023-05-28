@@ -26,7 +26,7 @@ const Gallery = () => {
                 data-aos="fade-left"
                 data-aos-duration="1200"
                 data-aos-easing="ease-in-out"
-                className="brush p-1 text-3xl "
+                className="great p-1 text-3xl "
               >
                 Happiness
               </span>{" "}

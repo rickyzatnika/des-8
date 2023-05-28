@@ -37,7 +37,7 @@ const Gift = () => {
                   data-aos="fade-up"
                   data-aos-duration="1200"
                   data-aos-easing="ease-in-out"
-                  className="text-3xl text-[#444337] brush"
+                  className="text-3xl text-[#444337] great"
                 >
                   Share
                 </h3>
@@ -54,7 +54,7 @@ const Gift = () => {
                 data-aos="fade-up"
                 data-aos-duration="1200"
                 data-aos-easing="ease-in-out"
-                className="text-center  text-sm text-[#444337] leading-relaxed"
+                className="text-center mont text-sm text-[#444337] leading-relaxed"
               >
                 Doa dan restu Anda pada pernikahan kami sudah cukup sebagai
                 hadiah, tetapi jika Anda ingin memberikan lebih, kami senang
@@ -110,7 +110,7 @@ const Gift = () => {
                       data-aos="fade-up"
                       data-aos-duration="1200"
                       data-aos-easing="ease-in-out"
-                      className="text-[#444337] text-md uppercase sm:text-lg mb-2 tracking-wider"
+                      className="text-[#444337] title text-md uppercase sm:text-lg mb-2 tracking-wider"
                     >
                       yanwar arifin
                     </p>
@@ -118,7 +118,7 @@ const Gift = () => {
                       data-aos="fade-up"
                       data-aos-duration="1400"
                       data-aos-easing="ease-in-out"
-                      className="text-[#444337] text-sm sm:text-md  tracking-wide"
+                      className="text-[#444337] mont text-sm sm:text-md  tracking-wide"
                     >
                       NO.REK : 0123456789
                     </p>
@@ -170,7 +170,7 @@ const Gift = () => {
                       data-aos="fade-up"
                       data-aos-duration="1200"
                       data-aos-easing="ease-in-out"
-                      className="text-[#444337] text-md uppercase sm:text-lg mb-2 tracking-wider"
+                      className="text-[#444337] title text-md uppercase sm:text-lg mb-2 tracking-wider"
                     >
                       asri sulastri
                     </p>
@@ -178,7 +178,7 @@ const Gift = () => {
                       data-aos="fade-up"
                       data-aos-duration="1400"
                       data-aos-easing="ease-in-out"
-                      className="text-[#444337] text-sm sm:text-md  tracking-wide"
+                      className="text-[#444337] mont text-sm sm:text-md  tracking-wide"
                     >
                       NO.REK : 012345678
                     </p>

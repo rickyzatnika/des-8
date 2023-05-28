@@ -31,7 +31,7 @@ const Aside = () => {
             data-aos="fade-down"
             data-aos-duration="1200"
             data-aos-easing="ease-in-out"
-            className="fixed z-30 top-14 text-zinc-300 text-lg "
+            className="fixed z-30 top-14 title text-zinc-300 text-lg "
           >
             Wedding Invitation
           </div>
@@ -74,7 +74,7 @@ const Aside = () => {
                 Asri
               </h1>
             </div>
-            <p className=" text-zinc-200/80 ">10 Juni 2023</p>
+            <p className=" text-zinc-200/80 title">10 Juni 2023</p>
           </div>
         </div>
       </Container>

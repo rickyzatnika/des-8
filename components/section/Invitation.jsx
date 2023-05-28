@@ -9,23 +9,13 @@ const Invitation = () => {
         className="w-full flex items-center flex-col py-8 justify-evenly min-h-screen bg-[url('/img/bg.jpg')] bg-cover bg-right relative"
       >
         <div className="absolute top-0 left-0 w-full h-full z-10 bg-gradient-to-t from-white via-transparent to-white" />
-        {/* <div className="w-full bg-invitation absolute -rotate-45 mix-blend-screen left-44 sm:left-60 md:left-96 lg:left-40 top-0">
-        <Image
-          src="/image/ornamen-profile.png"
-          width={50}
-          height={25}
-          alt=""
-          objectFit="contain"
-          layout="responsive"
-          priority
-        />
-      </div> */}
+
         <div className="text-center relative z-20">
           <h1
             data-aos="fade-up"
             data-aos-duration="1000"
             data-aos-easing="ease-in-out"
-            className=" text-[#516C56] mb-2 text-lg md:text-xl px-2 font-[Hattori]"
+            className=" text-[#516C56] mb-2 text-lg md:text-xl px-2 title"
           >
             Assalamu`alaikum Warahmatullahi Wabarakatuh
           </h1>
@@ -33,7 +23,7 @@ const Invitation = () => {
             data-aos="fade-up"
             data-aos-duration="1200"
             data-aos-easing="ease-in-out"
-            className="text-[#516C56] text-sm leading-relaxed"
+            className="text-zinc-500/90 mont text-sm leading-relaxed px-1"
           >
             Dengan menyebut nama Allah SWT yang Maha Pengasih dan Maha
             Penyayang, kami dengan senang hati ingin mengundang
@@ -46,7 +36,7 @@ const Invitation = () => {
             data-aos="fade-up"
             data-aos-duration="1200"
             data-aos-easing="ease-in-out"
-            className="text-[#84a189] italic font-whin"
+            className="text-zinc-600 title pt-3"
           >
             Pada Tanggal :
           </span>
@@ -66,9 +56,11 @@ const Invitation = () => {
             data-aos-easing="ease-in-out"
             className="w-fit text-center flex flex-col items-center gap-2  py-2 leading-relaxed"
           >
-            <h3 className="text-[#84a189] text-md sm:text-lg ">Akad Nikah</h3>
+            <h3 className="text-zinc-600 title text-md sm:text-lg ">
+              Akad Nikah
+            </h3>
 
-            <p className="text-[#84a189] text-sm leading-loose">
+            <p className="text-zinc-500 mont text-sm leading-loose">
               {" "}
               Pukul 08.00 WIB <br /> s/d <br /> Selesai
             </p>
@@ -79,9 +71,9 @@ const Invitation = () => {
             data-aos-easing="ease-in-out"
             className="w-fit text-center flex flex-col items-center gap-2 py-2 leading-relaxed"
           >
-            <h3 className="text-[#84a189] text-md sm:text-lg ">Resepsi</h3>
+            <h3 className="text-zinc-600 title text-md sm:text-lg ">Resepsi</h3>
 
-            <p className="text-[#84a189] text-sm leading-loose">
+            <p className="text-zinc-500 mont text-sm leading-loose">
               Pukul 10.00 WIB <br /> s/d <br /> Pukul 14.20 WIB
             </p>
           </div>
@@ -92,11 +84,11 @@ const Invitation = () => {
           data-aos-easing="ease-in-out"
           className="py-4 leading-relaxed text-center relative z-40"
         >
-          <p className="text-[#84a189] italic">Tempat :</p>
-          <p className="text-[#503e2d] flex text-xl flex-col tracking-wide items-center gap-3 ">
+          <p className="text-zinc-800/80  title">Lokasi :</p>
+          <p className="text-zinc-800 mont flex text-xl flex-col tracking-wide items-center gap-3 ">
             AL-HAROMAIN <br />
           </p>
-          <span className="px-2 text-[#84a189] leading-relaxed text-sm tracking-normal">
+          <span className="px-2 mont text-zinc-700/80 leading-relaxed text-sm tracking-normal">
             Jl. Tubagus Ismail No.90, Sekeloa, Kecamatan Coblong, Kota Bandung,
             Jawa Barat 40134
           </span>

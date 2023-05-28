@@ -46,7 +46,7 @@ const Story = () => {
               data-aos="fade-left"
               data-aos-duration="1200"
               data-aos-easing="ease-in-out"
-              className="p-1 text-3xl brush "
+              className="p-1 text-3xl great "
             >
               Short
             </span>{" "}
@@ -86,7 +86,7 @@ const Story = () => {
                       data-aos="fade-right"
                       data-aos-duration="1200"
                       data-aos-easing="ease-in-out"
-                      className="text-xl brush text-[#a5876c]"
+                      className="text-lg title text-[#a5876c]"
                     >
                       {post?.title}
                     </h1>
@@ -94,7 +94,7 @@ const Story = () => {
                       data-aos="fade-up"
                       data-aos-duration="1200"
                       data-aos-easing="ease-in-out"
-                      className="text-zinc-500 leading-relaxed text-sm"
+                      className="text-zinc-500 mont leading-relaxed text-sm"
                     >
                       {post?.description}
                     </div>
